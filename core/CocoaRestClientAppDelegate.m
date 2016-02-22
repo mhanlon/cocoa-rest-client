@@ -514,12 +514,12 @@ static CRCContentType requestContentType;
 }
 
 - (void) applyShowLineNumbers:(BOOL)show {
-    [responseView setShowLineNumbers:show];
+//    [responseView setShowLineNumbers:show];
     [responseView setShowFoldWidgets:show];
-    [responseView setShowGutter:show];
-    [requestView setShowLineNumbers:show];
+//    [responseView setShowGutter:show];
+//    [requestView setShowLineNumbers:show];
     [requestView setShowFoldWidgets:show];
-    [requestView setShowGutter:show];
+//    [requestView setShowGutter:show];
 }
 
 - (void) showLineNumbersToggled:(id)sender {
@@ -543,9 +543,9 @@ static CRCContentType requestContentType;
     // Assume that in most cases the user wants to search in the response, unless they explicitly
     // have their focus on the request.
     if ([requestView ancestorSharedWithView:(NSView *)responder] == requestView) {
-        [requestView showFindInterface];
+//        [requestView showFindInterface];
     } else {
-        [responseView showFindInterface];
+//        [responseView showFindInterface];
     }
 }
 
@@ -554,9 +554,9 @@ static CRCContentType requestContentType;
     // Assume that in most cases the user wants to search in the response, unless they explicitly
     // have their focus on the request.
     if ([requestView ancestorSharedWithView:(NSView *)responder] == requestView) {
-        [requestView findNextMatch];
+//        [requestView findNextMatch];
     } else {
-        [responseView findNextMatch];
+//        [responseView findNextMatch];
     }
 }
 
@@ -565,9 +565,9 @@ static CRCContentType requestContentType;
     // Assume that in most cases the user wants to search in the response, unless they explicitly
     // have their focus on the request.
     if ([requestView ancestorSharedWithView:(NSView *)responder] == requestView) {
-        [requestView findPreviousMatch];
+//        [requestView findPreviousMatch];
     } else {
-        [responseView findPreviousMatch];
+//        [responseView findPreviousMatch];
     }
 }
 
@@ -575,7 +575,7 @@ static CRCContentType requestContentType;
     NSResponder *responder = [self.window firstResponder];
     // Replace only makes sense for the requestView
     if ([requestView ancestorSharedWithView:(NSView *)responder] == requestView) {
-        [requestView showReplaceInterface];
+//        [requestView showReplaceInterface];
     }
 }
 
